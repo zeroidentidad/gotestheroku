@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Webchat CF</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css?v=2">
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="registro">
+            <br />
+            <form id="form-registro">
+                <label>Usuario:</label>
+                <input type="text" id="username"/>
+                <input type="submit" value="Ingresar" class="btn btn-primary"/>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div id="container-chat">
+        <div class="chat">
+            <div id="chatZona">
+                <textarea id="chatArea" rows="20" cols="70" class="form-control">
+                </textarea>
+                <br />
+                <form id="form-mensaje">
+                    <input type="text" id="mensaje" class="form-control" />
+                    <input type="submit" vale="Enviar" id="enviar" class="btn btn-success" />
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
