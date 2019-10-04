@@ -1,7 +1,10 @@
 $(document).ready(function () {
 
+    var host = window.location.hostname;
     var username;
     var finalConexion;
+
+    alert(host);
 
     $("#form-registro").on("submit", function (e) {
         e.preventDefault();
