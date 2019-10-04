@@ -4,15 +4,13 @@ $(document).ready(function () {
     var username;
     var finalConexion;
 
-    alert(host);
-
     $("#form-registro").on("submit", function (e) {
         e.preventDefault();
         username = $('#username').val();
 
         $.ajax({
             type: 'POST',
-            url: 'http://localhost:8000/validar',
+            url: 'https://'+host+'/validar',
             data: {
                 "username": username
             },
@@ -35,7 +33,7 @@ $(document).ready(function () {
     function crearConexion() {
         $("#registro").hide()
         $("#container-chat").show()
-        var conexion = new WebSocket("ws://localhost:8000/chat/"+username)
+        var conexion = new WebSocket("ws://"+host+"/chat/"+username)
         finalConexion = conexion
         conexion.onopen = function (response) {
             conexion.onmessage = function (response) {
