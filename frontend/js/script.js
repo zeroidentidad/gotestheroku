@@ -33,7 +33,7 @@ $(document).ready(function () {
     function crearConexion() {
         $("#registro").hide()
         $("#container-chat").show()
-        var conexion = new WebSocket("ws://"+host+"/chat/"+username)
+        var conexion = new WebSocket("wss://"+host+"/chat/"+username)
         finalConexion = conexion
         conexion.onopen = function (response) {
             conexion.onmessage = function (response) {
